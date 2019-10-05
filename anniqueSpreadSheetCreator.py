@@ -37,7 +37,7 @@ def remove_decimals(word):
 
 
 date = datetime.datetime.now()
-# date = datetime.datetime(2019, 9, 12)
+# date = datetime.datetime(2019, 11, 12)
 directory = 'C:\\AnniqueSpreadSheets'
 getDirectory = directory+'\\Get'
 setDirectory = directory+'\\Set'
@@ -228,9 +228,13 @@ create_spreadsheet(columns, data)
 
 
 storeIncome = []
+member = []
+name = []
 for i in data:
     storeIncome.append(i[5])
-
+    member.append(i[1])
+    name.append(i[2])
+print(member)
 
 os.chdir(dataDirectory)
 
@@ -249,7 +253,8 @@ cmonth1 = columnShelf.__getitem__('cmonth1')
 
 
 columnShelf.__setitem__('month1', storeIncome)
-
+columnShelf.__setitem__('members', member)
+columnShelf.__setitem__('name', name)
 
 columnShelf.close()
 os.chdir(setDirectory)
