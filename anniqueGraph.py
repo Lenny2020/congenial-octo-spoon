@@ -93,5 +93,4 @@ months.append(cmonth1)
 print(months)
 print(incomes)
 print(name)
-
 draw_graph(incomes, months, name)
